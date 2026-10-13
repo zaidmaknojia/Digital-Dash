@@ -1,0 +1,905 @@
+1
+00:00:06,310 --> 00:00:12,009
+
+[Music]
+
+2
+00:00:12,009 --> 00:00:12,019
+
+ 
+
+3
+00:00:12,019 --> 00:00:14,209
+
+thank you
+
+4
+00:00:14,209 --> 00:00:14,219
+thank you
+ 
+
+5
+00:00:14,219 --> 00:00:16,310
+thank you
+hi my name is Greg durat I'm really
+
+6
+00:00:16,310 --> 00:00:16,320
+hi my name is Greg durat I'm really
+ 
+
+7
+00:00:16,320 --> 00:00:17,870
+hi my name is Greg durat I'm really
+excited to introduce you to my course
+
+8
+00:00:17,870 --> 00:00:17,880
+excited to introduce you to my course
+ 
+
+9
+00:00:17,880 --> 00:00:20,150
+excited to introduce you to my course
+natural language processing I'm an
+
+10
+00:00:20,150 --> 00:00:20,160
+natural language processing I'm an
+ 
+
+11
+00:00:20,160 --> 00:00:21,830
+natural language processing I'm an
+assistant professor in the department of
+
+12
+00:00:21,830 --> 00:00:21,840
+assistant professor in the department of
+ 
+
+13
+00:00:21,840 --> 00:00:24,109
+assistant professor in the department of
+computer science here at UT Austin and
+
+14
+00:00:24,109 --> 00:00:24,119
+computer science here at UT Austin and
+ 
+
+15
+00:00:24,119 --> 00:00:25,070
+computer science here at UT Austin and
+I've been working in the field of
+
+16
+00:00:25,070 --> 00:00:25,080
+I've been working in the field of
+ 
+
+17
+00:00:25,080 --> 00:00:26,870
+I've been working in the field of
+natural language processing for about 12
+
+18
+00:00:26,870 --> 00:00:26,880
+natural language processing for about 12
+ 
+
+19
+00:00:26,880 --> 00:00:28,130
+natural language processing for about 12
+years now
+
+20
+00:00:28,130 --> 00:00:28,140
+years now
+ 
+
+21
+00:00:28,140 --> 00:00:30,710
+years now
+and it's been a really exciting 12 years
+
+22
+00:00:30,710 --> 00:00:30,720
+and it's been a really exciting 12 years
+ 
+
+23
+00:00:30,720 --> 00:00:32,810
+and it's been a really exciting 12 years
+and we've seen a progression all the way
+
+24
+00:00:32,810 --> 00:00:32,820
+and we've seen a progression all the way
+ 
+
+25
+00:00:32,820 --> 00:00:35,270
+and we've seen a progression all the way
+from linear models uh things like
+
+26
+00:00:35,270 --> 00:00:35,280
+from linear models uh things like
+ 
+
+27
+00:00:35,280 --> 00:00:37,850
+from linear models uh things like
+classifiers up through the latest and
+
+28
+00:00:37,850 --> 00:00:37,860
+classifiers up through the latest and
+ 
+
+29
+00:00:37,860 --> 00:00:40,069
+classifiers up through the latest and
+greatest systems like Chachi BT
+
+30
+00:00:40,069 --> 00:00:40,079
+greatest systems like Chachi BT
+ 
+
+31
+00:00:40,079 --> 00:00:41,930
+greatest systems like Chachi BT
+so if you've played around with Chachi
+
+32
+00:00:41,930 --> 00:00:41,940
+so if you've played around with Chachi
+ 
+
+33
+00:00:41,940 --> 00:00:43,850
+so if you've played around with Chachi
+PT you know that it can do things like
+
+34
+00:00:43,850 --> 00:00:43,860
+PT you know that it can do things like
+ 
+
+35
+00:00:43,860 --> 00:00:46,369
+PT you know that it can do things like
+this we can ask a question like how many
+
+36
+00:00:46,369 --> 00:00:46,379
+this we can ask a question like how many
+ 
+
+37
+00:00:46,379 --> 00:00:47,510
+this we can ask a question like how many
+years after the start of the
+
+38
+00:00:47,510 --> 00:00:47,520
+years after the start of the
+ 
+
+39
+00:00:47,520 --> 00:00:49,250
+years after the start of the
+Revolutionary War did George Washington
+
+40
+00:00:49,250 --> 00:00:49,260
+Revolutionary War did George Washington
+ 
+
+41
+00:00:49,260 --> 00:00:52,729
+Revolutionary War did George Washington
+step down as president and the system
+
+42
+00:00:52,729 --> 00:00:52,739
+step down as president and the system
+ 
+
+43
+00:00:52,739 --> 00:00:56,209
+step down as president and the system
+will do its computation and it will
+
+44
+00:00:56,209 --> 00:00:56,219
+will do its computation and it will
+ 
+
+45
+00:00:56,219 --> 00:00:59,150
+will do its computation and it will
+produce this answer that has to look up
+
+46
+00:00:59,150 --> 00:00:59,160
+produce this answer that has to look up
+ 
+
+47
+00:00:59,160 --> 00:01:01,310
+produce this answer that has to look up
+these two dates and take the difference
+
+48
+00:01:01,310 --> 00:01:01,320
+these two dates and take the difference
+ 
+
+49
+00:01:01,320 --> 00:01:02,930
+these two dates and take the difference
+between them and figure out this number
+
+50
+00:01:02,930 --> 00:01:02,940
+between them and figure out this number
+ 
+
+51
+00:01:02,940 --> 00:01:06,350
+between them and figure out this number
+of years so Chachi BT is a large neural
+
+52
+00:01:06,350 --> 00:01:06,360
+of years so Chachi BT is a large neural
+ 
+
+53
+00:01:06,360 --> 00:01:08,390
+of years so Chachi BT is a large neural
+network language model but what's a
+
+54
+00:01:08,390 --> 00:01:08,400
+network language model but what's a
+ 
+
+55
+00:01:08,400 --> 00:01:10,010
+network language model but what's a
+language model what kind of neural
+
+56
+00:01:10,010 --> 00:01:10,020
+language model what kind of neural
+ 
+
+57
+00:01:10,020 --> 00:01:11,810
+language model what kind of neural
+network is being used here what can it
+
+58
+00:01:11,810 --> 00:01:11,820
+network is being used here what can it
+ 
+
+59
+00:01:11,820 --> 00:01:14,330
+network is being used here what can it
+be used for how is it trained these are
+
+60
+00:01:14,330 --> 00:01:14,340
+be used for how is it trained these are
+ 
+
+61
+00:01:14,340 --> 00:01:16,130
+be used for how is it trained these are
+all kinds of questions that you might
+
+62
+00:01:16,130 --> 00:01:16,140
+all kinds of questions that you might
+ 
+
+63
+00:01:16,140 --> 00:01:17,690
+all kinds of questions that you might
+have that are going to get answered in
+
+64
+00:01:17,690 --> 00:01:17,700
+have that are going to get answered in
+ 
+
+65
+00:01:17,700 --> 00:01:19,190
+have that are going to get answered in
+this course
+
+66
+00:01:19,190 --> 00:01:19,200
+this course
+ 
+
+67
+00:01:19,200 --> 00:01:22,670
+this course
+so the goal is to start all the way from
+
+68
+00:01:22,670 --> 00:01:22,680
+so the goal is to start all the way from
+ 
+
+69
+00:01:22,680 --> 00:01:25,249
+so the goal is to start all the way from
+ml fundamentals like classification and
+
+70
+00:01:25,249 --> 00:01:25,259
+ml fundamentals like classification and
+ 
+
+71
+00:01:25,259 --> 00:01:27,350
+ml fundamentals like classification and
+then build up to the tools that we need
+
+72
+00:01:27,350 --> 00:01:27,360
+then build up to the tools that we need
+ 
+
+73
+00:01:27,360 --> 00:01:29,630
+then build up to the tools that we need
+to understand systems like Chachi BT
+
+74
+00:01:29,630 --> 00:01:29,640
+to understand systems like Chachi BT
+ 
+
+75
+00:01:29,640 --> 00:01:32,090
+to understand systems like Chachi BT
+we're going to cover all of the methods
+
+76
+00:01:32,090 --> 00:01:32,100
+we're going to cover all of the methods
+ 
+
+77
+00:01:32,100 --> 00:01:34,310
+we're going to cover all of the methods
+that we need here and we're also going
+
+78
+00:01:34,310 --> 00:01:34,320
+that we need here and we're also going
+ 
+
+79
+00:01:34,320 --> 00:01:36,410
+that we need here and we're also going
+to understand the applications that
+
+80
+00:01:36,410 --> 00:01:36,420
+to understand the applications that
+ 
+
+81
+00:01:36,420 --> 00:01:38,990
+to understand the applications that
+modern NLP research is used for and
+
+82
+00:01:38,990 --> 00:01:39,000
+modern NLP research is used for and
+ 
+
+83
+00:01:39,000 --> 00:01:40,370
+modern NLP research is used for and
+we're going to give you the tools to
+
+84
+00:01:40,370 --> 00:01:40,380
+we're going to give you the tools to
+ 
+
+85
+00:01:40,380 --> 00:01:43,249
+we're going to give you the tools to
+understand how to take these systems and
+
+86
+00:01:43,249 --> 00:01:43,259
+understand how to take these systems and
+ 
+
+87
+00:01:43,259 --> 00:01:44,990
+understand how to take these systems and
+apply them to real world problems so
+
+88
+00:01:44,990 --> 00:01:45,000
+apply them to real world problems so
+ 
+
+89
+00:01:45,000 --> 00:01:46,249
+apply them to real world problems so
+when you're faced with something down
+
+90
+00:01:46,249 --> 00:01:46,259
+when you're faced with something down
+ 
+
+91
+00:01:46,259 --> 00:01:49,190
+when you're faced with something down
+the road you know what to use
+
+92
+00:01:49,190 --> 00:01:49,200
+the road you know what to use
+ 
+
+93
+00:01:49,200 --> 00:01:51,530
+the road you know what to use
+the lectures for this course are going
+
+94
+00:01:51,530 --> 00:01:51,540
+the lectures for this course are going
+ 
+
+95
+00:01:51,540 --> 00:01:53,690
+the lectures for this course are going
+to walk you through a lot of these
+
+96
+00:01:53,690 --> 00:01:53,700
+to walk you through a lot of these
+ 
+
+97
+00:01:53,700 --> 00:01:56,330
+to walk you through a lot of these
+different modeling details and show you
+
+98
+00:01:56,330 --> 00:01:56,340
+different modeling details and show you
+ 
+
+99
+00:01:56,340 --> 00:01:58,609
+different modeling details and show you
+how these are actually built from the
+
+100
+00:01:58,609 --> 00:01:58,619
+how these are actually built from the
+ 
+
+101
+00:01:58,619 --> 00:02:00,950
+how these are actually built from the
+ground up here's an example of what one
+
+102
+00:02:00,950 --> 00:02:00,960
+ground up here's an example of what one
+ 
+
+103
+00:02:00,960 --> 00:02:02,870
+ground up here's an example of what one
+of the lectures is going to look like
+
+104
+00:02:02,870 --> 00:02:02,880
+of the lectures is going to look like
+ 
+
+105
+00:02:02,880 --> 00:02:06,170
+of the lectures is going to look like
+so their formula involves q k and V
+
+106
+00:02:06,170 --> 00:02:06,180
+so their formula involves q k and V
+ 
+
+107
+00:02:06,180 --> 00:02:08,690
+so their formula involves q k and V
+which are computed based on the kind of
+
+108
+00:02:08,690 --> 00:02:08,700
+which are computed based on the kind of
+ 
+
+109
+00:02:08,700 --> 00:02:10,990
+which are computed based on the kind of
+input embeddings like we've been doing
+
+110
+00:02:10,990 --> 00:02:11,000
+input embeddings like we've been doing
+ 
+
+111
+00:02:11,000 --> 00:02:13,250
+input embeddings like we've been doing
+multiplying by these parameter matrices
+
+112
+00:02:13,250 --> 00:02:13,260
+multiplying by these parameter matrices
+ 
+
+113
+00:02:13,260 --> 00:02:15,890
+multiplying by these parameter matrices
+WQ WK and WV
+
+114
+00:02:15,890 --> 00:02:15,900
+WQ WK and WV
+ 
+
+115
+00:02:15,900 --> 00:02:18,830
+WQ WK and WV
+and we take this
+
+116
+00:02:18,830 --> 00:02:18,840
+and we take this
+ 
+
+117
+00:02:18,840 --> 00:02:22,130
+and we take this
+soft Max of Q times K transpose so that
+
+118
+00:02:22,130 --> 00:02:22,140
+soft Max of Q times K transpose so that
+ 
+
+119
+00:02:22,140 --> 00:02:23,750
+soft Max of Q times K transpose so that
+we've all seen and then there's one
+
+120
+00:02:23,750 --> 00:02:23,760
+we've all seen and then there's one
+ 
+
+121
+00:02:23,760 --> 00:02:25,130
+we've all seen and then there's one
+extra little step that they do here
+
+122
+00:02:25,130 --> 00:02:25,140
+extra little step that they do here
+ 
+
+123
+00:02:25,140 --> 00:02:27,170
+extra little step that they do here
+which is they divide and rescale
+
+124
+00:02:27,170 --> 00:02:27,180
+which is they divide and rescale
+ 
+
+125
+00:02:27,180 --> 00:02:30,470
+which is they divide and rescale
+everything by square root of DK which is
+
+126
+00:02:30,470 --> 00:02:30,480
+everything by square root of DK which is
+ 
+
+127
+00:02:30,480 --> 00:02:33,050
+everything by square root of DK which is
+the basically Vector Dimension that all
+
+128
+00:02:33,050 --> 00:02:33,060
+the basically Vector Dimension that all
+ 
+
+129
+00:02:33,060 --> 00:02:35,210
+the basically Vector Dimension that all
+of these uh inner products are happening
+
+130
+00:02:35,210 --> 00:02:35,220
+of these uh inner products are happening
+ 
+
+131
+00:02:35,220 --> 00:02:38,030
+of these uh inner products are happening
+in it basically just has the effect of
+
+132
+00:02:38,030 --> 00:02:38,040
+in it basically just has the effect of
+ 
+
+133
+00:02:38,040 --> 00:02:40,010
+in it basically just has the effect of
+making the softmax less peaked it's not
+
+134
+00:02:40,010 --> 00:02:40,020
+making the softmax less peaked it's not
+ 
+
+135
+00:02:40,020 --> 00:02:42,050
+making the softmax less peaked it's not
+too important
+
+136
+00:02:42,050 --> 00:02:42,060
+too important
+ 
+
+137
+00:02:42,060 --> 00:02:44,990
+too important
+and then they multiply by V here in
+
+138
+00:02:44,990 --> 00:02:45,000
+and then they multiply by V here in
+ 
+
+139
+00:02:45,000 --> 00:02:46,550
+and then they multiply by V here in
+order to get the output so they're
+
+140
+00:02:46,550 --> 00:02:46,560
+order to get the output so they're
+ 
+
+141
+00:02:46,560 --> 00:02:50,809
+order to get the output so they're
+taking their uh attention Matrix a and
+
+142
+00:02:50,809 --> 00:02:50,819
+taking their uh attention Matrix a and
+ 
+
+143
+00:02:50,819 --> 00:02:53,330
+taking their uh attention Matrix a and
+multiplying that by V and so what
+
+144
+00:02:53,330 --> 00:02:53,340
+multiplying that by V and so what
+ 
+
+145
+00:02:53,340 --> 00:02:55,550
+multiplying that by V and so what
+they're getting is the output is a kind
+
+146
+00:02:55,550 --> 00:02:55,560
+they're getting is the output is a kind
+ 
+
+147
+00:02:55,560 --> 00:02:59,330
+they're getting is the output is a kind
+of weighted combination of V
+
+148
+00:02:59,330 --> 00:02:59,340
+of weighted combination of V
+ 
+
+149
+00:02:59,340 --> 00:03:01,790
+of weighted combination of V
+in addition to the lectures we also have
+
+150
+00:03:01,790 --> 00:03:01,800
+in addition to the lectures we also have
+ 
+
+151
+00:03:01,800 --> 00:03:03,530
+in addition to the lectures we also have
+a number of programming assignments
+
+152
+00:03:03,530 --> 00:03:03,540
+a number of programming assignments
+ 
+
+153
+00:03:03,540 --> 00:03:05,210
+a number of programming assignments
+which are designed to give you hands-on
+
+154
+00:03:05,210 --> 00:03:05,220
+which are designed to give you hands-on
+ 
+
+155
+00:03:05,220 --> 00:03:06,890
+which are designed to give you hands-on
+experience you're going to be actually
+
+156
+00:03:06,890 --> 00:03:06,900
+experience you're going to be actually
+ 
+
+157
+00:03:06,900 --> 00:03:08,750
+experience you're going to be actually
+building these models basically from
+
+158
+00:03:08,750 --> 00:03:08,760
+building these models basically from
+ 
+
+159
+00:03:08,760 --> 00:03:10,550
+building these models basically from
+scratch in pi torch so you're going to
+
+160
+00:03:10,550 --> 00:03:10,560
+scratch in pi torch so you're going to
+ 
+
+161
+00:03:10,560 --> 00:03:12,470
+scratch in pi torch so you're going to
+understand all the pieces from the
+
+162
+00:03:12,470 --> 00:03:12,480
+understand all the pieces from the
+ 
+
+163
+00:03:12,480 --> 00:03:14,030
+understand all the pieces from the
+ground up and you're also going to
+
+164
+00:03:14,030 --> 00:03:14,040
+ground up and you're also going to
+ 
+
+165
+00:03:14,040 --> 00:03:16,550
+ground up and you're also going to
+understand the data and how important
+
+166
+00:03:16,550 --> 00:03:16,560
+understand the data and how important
+ 
+
+167
+00:03:16,560 --> 00:03:19,070
+understand the data and how important
+that is in these processes so a big
+
+168
+00:03:19,070 --> 00:03:19,080
+that is in these processes so a big
+ 
+
+169
+00:03:19,080 --> 00:03:20,690
+that is in these processes so a big
+emphasis of the course is going to be
+
+170
+00:03:20,690 --> 00:03:20,700
+emphasis of the course is going to be
+ 
+
+171
+00:03:20,700 --> 00:03:22,850
+emphasis of the course is going to be
+thinking about data
+
+172
+00:03:22,850 --> 00:03:22,860
+thinking about data
+ 
+
+173
+00:03:22,860 --> 00:03:24,470
+thinking about data
+you can look at the syllabus in the
+
+174
+00:03:24,470 --> 00:03:24,480
+you can look at the syllabus in the
+ 
+
+175
+00:03:24,480 --> 00:03:26,390
+you can look at the syllabus in the
+course website for more details I'm
+
+176
+00:03:26,390 --> 00:03:26,400
+course website for more details I'm
+ 
+
+177
+00:03:26,400 --> 00:03:28,610
+course website for more details I'm
+really excited to teach this course and
+
+178
+00:03:28,610 --> 00:03:28,620
+really excited to teach this course and
+ 
+
+179
+00:03:28,620 --> 00:03:30,470
+really excited to teach this course and
+I hope to have you as a student thank
+
+180
+00:03:30,470 --> 00:03:30,480
+I hope to have you as a student thank
+ 
+
+181
+00:03:30,480 --> 00:03:32,599
+I hope to have you as a student thank
+you
+

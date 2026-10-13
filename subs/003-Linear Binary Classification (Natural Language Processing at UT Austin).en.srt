@@ -1,0 +1,1555 @@
+1
+00:00:01,870 --> 00:00:12,549
+
+[Music]
+
+2
+00:00:12,549 --> 00:00:12,559
+
+ 
+
+3
+00:00:12,559 --> 00:00:13,749
+
+in this segment we're going to talk
+
+4
+00:00:13,749 --> 00:00:13,759
+in this segment we're going to talk
+ 
+
+5
+00:00:13,759 --> 00:00:14,629
+in this segment we're going to talk
+about
+
+6
+00:00:14,629 --> 00:00:14,639
+about
+ 
+
+7
+00:00:14,639 --> 00:00:15,589
+about
+the
+
+8
+00:00:15,589 --> 00:00:15,599
+the
+ 
+
+9
+00:00:15,599 --> 00:00:17,109
+the
+simplest machine learning models that
+
+10
+00:00:17,109 --> 00:00:17,119
+simplest machine learning models that
+ 
+
+11
+00:00:17,119 --> 00:00:18,470
+simplest machine learning models that
+we're going to see in this course which
+
+12
+00:00:18,470 --> 00:00:18,480
+we're going to see in this course which
+ 
+
+13
+00:00:18,480 --> 00:00:21,349
+we're going to see in this course which
+are linear binary classifiers
+
+14
+00:00:21,349 --> 00:00:21,359
+are linear binary classifiers
+ 
+
+15
+00:00:21,359 --> 00:00:22,230
+are linear binary classifiers
+so
+
+16
+00:00:22,230 --> 00:00:22,240
+so
+ 
+
+17
+00:00:22,240 --> 00:00:24,310
+so
+uh this these may be something that
+
+18
+00:00:24,310 --> 00:00:24,320
+uh this these may be something that
+ 
+
+19
+00:00:24,320 --> 00:00:26,630
+uh this these may be something that
+you've come across in a previous course
+
+20
+00:00:26,630 --> 00:00:26,640
+you've come across in a previous course
+ 
+
+21
+00:00:26,640 --> 00:00:29,349
+you've come across in a previous course
+so uh you know consider this a way to
+
+22
+00:00:29,349 --> 00:00:29,359
+so uh you know consider this a way to
+ 
+
+23
+00:00:29,359 --> 00:00:31,269
+so uh you know consider this a way to
+kind of establish notation for this and
+
+24
+00:00:31,269 --> 00:00:31,279
+kind of establish notation for this and
+ 
+
+25
+00:00:31,279 --> 00:00:32,630
+kind of establish notation for this and
+just to make sure
+
+26
+00:00:32,630 --> 00:00:32,640
+just to make sure
+ 
+
+27
+00:00:32,640 --> 00:00:35,110
+just to make sure
+we're all on the same page
+
+28
+00:00:35,110 --> 00:00:35,120
+we're all on the same page
+ 
+
+29
+00:00:35,120 --> 00:00:36,229
+we're all on the same page
+so
+
+30
+00:00:36,229 --> 00:00:36,239
+so
+ 
+
+31
+00:00:36,239 --> 00:00:38,389
+so
+what a classifier is roughly going to do
+
+32
+00:00:38,389 --> 00:00:38,399
+what a classifier is roughly going to do
+ 
+
+33
+00:00:38,399 --> 00:00:41,670
+what a classifier is roughly going to do
+is it's going to take as input
+
+34
+00:00:41,670 --> 00:00:41,680
+is it's going to take as input
+ 
+
+35
+00:00:41,680 --> 00:00:43,110
+is it's going to take as input
+a point
+
+36
+00:00:43,110 --> 00:00:43,120
+a point
+ 
+
+37
+00:00:43,120 --> 00:00:44,389
+a point
+x
+
+38
+00:00:44,389 --> 00:00:44,399
+x
+ 
+
+39
+00:00:44,399 --> 00:00:45,750
+x
+in
+
+40
+00:00:45,750 --> 00:00:45,760
+in
+ 
+
+41
+00:00:45,760 --> 00:00:47,830
+in
+r to the d
+
+42
+00:00:47,830 --> 00:00:47,840
+r to the d
+ 
+
+43
+00:00:47,840 --> 00:00:51,430
+r to the d
+this means a some sort of uh numeric
+
+44
+00:00:51,430 --> 00:00:51,440
+this means a some sort of uh numeric
+ 
+
+45
+00:00:51,440 --> 00:00:54,069
+this means a some sort of uh numeric
+data in a d dimensional real valued
+
+46
+00:00:54,069 --> 00:00:54,079
+data in a d dimensional real valued
+ 
+
+47
+00:00:54,079 --> 00:00:56,229
+data in a d dimensional real valued
+feature space
+
+48
+00:00:56,229 --> 00:00:56,239
+feature space
+ 
+
+49
+00:00:56,239 --> 00:01:00,069
+feature space
+uh and we are going to also
+
+50
+00:01:00,069 --> 00:01:00,079
+uh and we are going to also
+ 
+
+51
+00:01:00,079 --> 00:01:02,869
+uh and we are going to also
+use the notation f of x
+
+52
+00:01:02,869 --> 00:01:02,879
+use the notation f of x
+ 
+
+53
+00:01:02,879 --> 00:01:04,710
+use the notation f of x
+extensively in this course where f is
+
+54
+00:01:04,710 --> 00:01:04,720
+extensively in this course where f is
+ 
+
+55
+00:01:04,720 --> 00:01:12,149
+extensively in this course where f is
+what we call a feature extractor
+
+56
+00:01:12,149 --> 00:01:12,159
+
+ 
+
+57
+00:01:12,159 --> 00:01:14,310
+
+all right and so the
+
+58
+00:01:14,310 --> 00:01:14,320
+all right and so the
+ 
+
+59
+00:01:14,320 --> 00:01:16,469
+all right and so the
+reason we think about this way
+
+60
+00:01:16,469 --> 00:01:16,479
+reason we think about this way
+ 
+
+61
+00:01:16,479 --> 00:01:19,350
+reason we think about this way
+we think about it this way is that x in
+
+62
+00:01:19,350 --> 00:01:19,360
+we think about it this way is that x in
+ 
+
+63
+00:01:19,360 --> 00:01:21,350
+we think about it this way is that x in
+a lot of our problems is going to be a
+
+64
+00:01:21,350 --> 00:01:21,360
+a lot of our problems is going to be a
+ 
+
+65
+00:01:21,360 --> 00:01:23,270
+a lot of our problems is going to be a
+string it's not going to be a numeric
+
+66
+00:01:23,270 --> 00:01:23,280
+string it's not going to be a numeric
+ 
+
+67
+00:01:23,280 --> 00:01:26,710
+string it's not going to be a numeric
+valued thing and then uh f x is going to
+
+68
+00:01:26,710 --> 00:01:26,720
+valued thing and then uh f x is going to
+ 
+
+69
+00:01:26,720 --> 00:01:29,190
+valued thing and then uh f x is going to
+be the set of features uh in the d
+
+70
+00:01:29,190 --> 00:01:29,200
+be the set of features uh in the d
+ 
+
+71
+00:01:29,200 --> 00:01:31,429
+be the set of features uh in the d
+dimensional space so um we might move
+
+72
+00:01:31,429 --> 00:01:31,439
+dimensional space so um we might move
+ 
+
+73
+00:01:31,439 --> 00:01:32,789
+dimensional space so um we might move
+back and forth between these two
+
+74
+00:01:32,789 --> 00:01:32,799
+back and forth between these two
+ 
+
+75
+00:01:32,799 --> 00:01:34,390
+back and forth between these two
+different notations at various points
+
+76
+00:01:34,390 --> 00:01:34,400
+different notations at various points
+ 
+
+77
+00:01:34,400 --> 00:01:36,710
+different notations at various points
+throughout the course um but generally
+
+78
+00:01:36,710 --> 00:01:36,720
+throughout the course um but generally
+ 
+
+79
+00:01:36,720 --> 00:01:38,390
+throughout the course um but generally
+there does need to be some process of
+
+80
+00:01:38,390 --> 00:01:38,400
+there does need to be some process of
+ 
+
+81
+00:01:38,400 --> 00:01:40,550
+there does need to be some process of
+mapping from
+
+82
+00:01:40,550 --> 00:01:40,560
+mapping from
+ 
+
+83
+00:01:40,560 --> 00:01:42,389
+mapping from
+again a string
+
+84
+00:01:42,389 --> 00:01:42,399
+again a string
+ 
+
+85
+00:01:42,399 --> 00:01:45,109
+again a string
+input which most natural language is
+
+86
+00:01:45,109 --> 00:01:45,119
+input which most natural language is
+ 
+
+87
+00:01:45,119 --> 00:01:47,510
+input which most natural language is
+into some sort of numeric representation
+
+88
+00:01:47,510 --> 00:01:47,520
+into some sort of numeric representation
+ 
+
+89
+00:01:47,520 --> 00:01:50,870
+into some sort of numeric representation
+that can be used in machine learning
+
+90
+00:01:50,870 --> 00:01:50,880
+that can be used in machine learning
+ 
+
+91
+00:01:50,880 --> 00:01:53,190
+that can be used in machine learning
+all right and then each point
+
+92
+00:01:53,190 --> 00:01:53,200
+all right and then each point
+ 
+
+93
+00:01:53,200 --> 00:01:55,590
+all right and then each point
+has a label
+
+94
+00:01:55,590 --> 00:01:55,600
+has a label
+ 
+
+95
+00:01:55,600 --> 00:01:57,190
+has a label
+y and
+
+96
+00:01:57,190 --> 00:01:57,200
+y and
+ 
+
+97
+00:01:57,200 --> 00:02:00,149
+y and
+in binary classification there's only
+
+98
+00:02:00,149 --> 00:02:00,159
+in binary classification there's only
+ 
+
+99
+00:02:00,159 --> 00:02:02,389
+in binary classification there's only
+going to be two possibilities
+
+100
+00:02:02,389 --> 00:02:02,399
+going to be two possibilities
+ 
+
+101
+00:02:02,399 --> 00:02:03,910
+going to be two possibilities
+and we are going to refer to these as
+
+102
+00:02:03,910 --> 00:02:03,920
+and we are going to refer to these as
+ 
+
+103
+00:02:03,920 --> 00:02:05,990
+and we are going to refer to these as
+minus one and plus one or negative and
+
+104
+00:02:05,990 --> 00:02:06,000
+minus one and plus one or negative and
+ 
+
+105
+00:02:06,000 --> 00:02:09,190
+minus one and plus one or negative and
+positive class
+
+106
+00:02:09,190 --> 00:02:09,200
+positive class
+ 
+
+107
+00:02:09,200 --> 00:02:10,070
+positive class
+so
+
+108
+00:02:10,070 --> 00:02:10,080
+so
+ 
+
+109
+00:02:10,080 --> 00:02:12,390
+so
+roughly the way we can think about this
+
+110
+00:02:12,390 --> 00:02:12,400
+roughly the way we can think about this
+ 
+
+111
+00:02:12,400 --> 00:02:13,670
+roughly the way we can think about this
+is
+
+112
+00:02:13,670 --> 00:02:13,680
+is
+ 
+
+113
+00:02:13,680 --> 00:02:16,630
+is
+that we've got
+
+114
+00:02:16,630 --> 00:02:16,640
+that we've got
+ 
+
+115
+00:02:16,640 --> 00:02:18,229
+that we've got
+a set of points
+
+116
+00:02:18,229 --> 00:02:18,239
+a set of points
+ 
+
+117
+00:02:18,239 --> 00:02:19,510
+a set of points
+this is going to be a two-dimensional
+
+118
+00:02:19,510 --> 00:02:19,520
+this is going to be a two-dimensional
+ 
+
+119
+00:02:19,520 --> 00:02:20,949
+this is going to be a two-dimensional
+feature space
+
+120
+00:02:20,949 --> 00:02:20,959
+feature space
+ 
+
+121
+00:02:20,959 --> 00:02:23,110
+feature space
+and we're going to draw some pluses up
+
+122
+00:02:23,110 --> 00:02:23,120
+and we're going to draw some pluses up
+ 
+
+123
+00:02:23,120 --> 00:02:24,470
+and we're going to draw some pluses up
+here
+
+124
+00:02:24,470 --> 00:02:24,480
+here
+ 
+
+125
+00:02:24,480 --> 00:02:25,430
+here
+and
+
+126
+00:02:25,430 --> 00:02:25,440
+and
+ 
+
+127
+00:02:25,440 --> 00:02:27,750
+and
+we're going to draw some minuses down
+
+128
+00:02:27,750 --> 00:02:27,760
+we're going to draw some minuses down
+ 
+
+129
+00:02:27,760 --> 00:02:29,270
+we're going to draw some minuses down
+here
+
+130
+00:02:29,270 --> 00:02:29,280
+here
+ 
+
+131
+00:02:29,280 --> 00:02:31,350
+here
+and so each of these again represents
+
+132
+00:02:31,350 --> 00:02:31,360
+and so each of these again represents
+ 
+
+133
+00:02:31,360 --> 00:02:33,509
+and so each of these again represents
+one of these x's and then whether it's
+
+134
+00:02:33,509 --> 00:02:33,519
+one of these x's and then whether it's
+ 
+
+135
+00:02:33,519 --> 00:02:37,030
+one of these x's and then whether it's
+plus or minus represents the label
+
+136
+00:02:37,030 --> 00:02:37,040
+plus or minus represents the label
+ 
+
+137
+00:02:37,040 --> 00:02:38,470
+plus or minus represents the label
+all right and then we're going to
+
+138
+00:02:38,470 --> 00:02:38,480
+all right and then we're going to
+ 
+
+139
+00:02:38,480 --> 00:02:41,589
+all right and then we're going to
+represent a classifier
+
+140
+00:02:41,589 --> 00:02:41,599
+represent a classifier
+ 
+
+141
+00:02:41,599 --> 00:02:42,630
+represent a classifier
+as
+
+142
+00:02:42,630 --> 00:02:42,640
+as
+ 
+
+143
+00:02:42,640 --> 00:02:48,229
+as
+a weight vector
+
+144
+00:02:48,229 --> 00:02:48,239
+
+ 
+
+145
+00:02:48,239 --> 00:02:49,190
+
+w
+
+146
+00:02:49,190 --> 00:02:49,200
+w
+ 
+
+147
+00:02:49,200 --> 00:02:52,070
+w
+um and you might see theta in some
+
+148
+00:02:52,070 --> 00:02:52,080
+um and you might see theta in some
+ 
+
+149
+00:02:52,080 --> 00:02:53,670
+um and you might see theta in some
+places um
+
+150
+00:02:53,670 --> 00:02:53,680
+places um
+ 
+
+151
+00:02:53,680 --> 00:02:56,790
+places um
+such as you know texts or uh academic
+
+152
+00:02:56,790 --> 00:02:56,800
+such as you know texts or uh academic
+ 
+
+153
+00:02:56,800 --> 00:02:58,710
+such as you know texts or uh academic
+papers um we're gonna try to stick with
+
+154
+00:02:58,710 --> 00:02:58,720
+papers um we're gonna try to stick with
+ 
+
+155
+00:02:58,720 --> 00:03:00,949
+papers um we're gonna try to stick with
+w in this course but again these these
+
+156
+00:03:00,949 --> 00:03:00,959
+w in this course but again these these
+ 
+
+157
+00:03:00,959 --> 00:03:04,070
+w in this course but again these these
+mean the same thing
+
+158
+00:03:04,070 --> 00:03:04,080
+mean the same thing
+ 
+
+159
+00:03:04,080 --> 00:03:08,149
+mean the same thing
+and so the way that this weight vector
+
+160
+00:03:08,149 --> 00:03:08,159
+and so the way that this weight vector
+ 
+
+161
+00:03:08,159 --> 00:03:10,309
+and so the way that this weight vector
+leads to a classification decision is
+
+162
+00:03:10,309 --> 00:03:10,319
+leads to a classification decision is
+ 
+
+163
+00:03:10,319 --> 00:03:11,589
+leads to a classification decision is
+the following
+
+164
+00:03:11,589 --> 00:03:11,599
+the following
+ 
+
+165
+00:03:11,599 --> 00:03:13,030
+the following
+um
+
+166
+00:03:13,030 --> 00:03:13,040
+um
+ 
+
+167
+00:03:13,040 --> 00:03:15,350
+um
+we compute
+
+168
+00:03:15,350 --> 00:03:15,360
+we compute
+ 
+
+169
+00:03:15,360 --> 00:03:17,910
+we compute
+the dot product or
+
+170
+00:03:17,910 --> 00:03:17,920
+the dot product or
+ 
+
+171
+00:03:17,920 --> 00:03:20,309
+the dot product or
+the kind of vector transpose
+
+172
+00:03:20,309 --> 00:03:20,319
+the kind of vector transpose
+ 
+
+173
+00:03:20,319 --> 00:03:23,670
+the kind of vector transpose
+here of the weights and
+
+174
+00:03:23,670 --> 00:03:23,680
+here of the weights and
+ 
+
+175
+00:03:23,680 --> 00:03:26,550
+here of the weights and
+the features associated with the point
+
+176
+00:03:26,550 --> 00:03:26,560
+the features associated with the point
+ 
+
+177
+00:03:26,560 --> 00:03:29,270
+the features associated with the point
+and then we ask if that's greater than
+
+178
+00:03:29,270 --> 00:03:29,280
+and then we ask if that's greater than
+ 
+
+179
+00:03:29,280 --> 00:03:32,789
+and then we ask if that's greater than
+zero
+
+180
+00:03:32,789 --> 00:03:32,799
+
+ 
+
+181
+00:03:32,799 --> 00:03:34,229
+
+and
+
+182
+00:03:34,229 --> 00:03:34,239
+and
+ 
+
+183
+00:03:34,239 --> 00:03:36,149
+and
+essentially the way we can think about
+
+184
+00:03:36,149 --> 00:03:36,159
+essentially the way we can think about
+ 
+
+185
+00:03:36,159 --> 00:03:38,470
+essentially the way we can think about
+this is that uh
+
+186
+00:03:38,470 --> 00:03:38,480
+this is that uh
+ 
+
+187
+00:03:38,480 --> 00:03:40,869
+this is that uh
+there's the weight vector points in some
+
+188
+00:03:40,869 --> 00:03:40,879
+there's the weight vector points in some
+ 
+
+189
+00:03:40,879 --> 00:03:41,990
+there's the weight vector points in some
+direction
+
+190
+00:03:41,990 --> 00:03:42,000
+direction
+ 
+
+191
+00:03:42,000 --> 00:03:43,990
+direction
+in this feature space
+
+192
+00:03:43,990 --> 00:03:44,000
+in this feature space
+ 
+
+193
+00:03:44,000 --> 00:03:45,509
+in this feature space
+and then
+
+194
+00:03:45,509 --> 00:03:45,519
+and then
+ 
+
+195
+00:03:45,519 --> 00:03:48,710
+and then
+we've got
+
+196
+00:03:48,710 --> 00:03:48,720
+
+ 
+
+197
+00:03:48,720 --> 00:03:51,190
+
+this
+
+198
+00:03:51,190 --> 00:03:51,200
+
+ 
+
+199
+00:03:51,200 --> 00:03:58,470
+
+decision boundary
+
+200
+00:03:58,470 --> 00:03:58,480
+
+ 
+
+201
+00:03:58,480 --> 00:04:01,030
+
+that's perpendicular to the direction
+
+202
+00:04:01,030 --> 00:04:01,040
+that's perpendicular to the direction
+ 
+
+203
+00:04:01,040 --> 00:04:02,869
+that's perpendicular to the direction
+that w is pointing
+
+204
+00:04:02,869 --> 00:04:02,879
+that w is pointing
+ 
+
+205
+00:04:02,879 --> 00:04:04,710
+that w is pointing
+so the way to think about this is any
+
+206
+00:04:04,710 --> 00:04:04,720
+so the way to think about this is any
+ 
+
+207
+00:04:04,720 --> 00:04:07,670
+so the way to think about this is any
+point on
+
+208
+00:04:07,670 --> 00:04:07,680
+point on
+ 
+
+209
+00:04:07,680 --> 00:04:09,589
+point on
+the top right side of this decision
+
+210
+00:04:09,589 --> 00:04:09,599
+the top right side of this decision
+ 
+
+211
+00:04:09,599 --> 00:04:11,030
+the top right side of this decision
+boundary is going to be classified as
+
+212
+00:04:11,030 --> 00:04:11,040
+boundary is going to be classified as
+ 
+
+213
+00:04:11,040 --> 00:04:12,949
+boundary is going to be classified as
+positive because the dot product with w
+
+214
+00:04:12,949 --> 00:04:12,959
+positive because the dot product with w
+ 
+
+215
+00:04:12,959 --> 00:04:14,470
+positive because the dot product with w
+is going to be positive
+
+216
+00:04:14,470 --> 00:04:14,480
+is going to be positive
+ 
+
+217
+00:04:14,480 --> 00:04:17,349
+is going to be positive
+any point uh on the other side of the
+
+218
+00:04:17,349 --> 00:04:17,359
+any point uh on the other side of the
+ 
+
+219
+00:04:17,359 --> 00:04:19,830
+any point uh on the other side of the
+boundary is going to be negative um and
+
+220
+00:04:19,830 --> 00:04:19,840
+boundary is going to be negative um and
+ 
+
+221
+00:04:19,840 --> 00:04:21,430
+boundary is going to be negative um and
+and you know we're not going to worry
+
+222
+00:04:21,430 --> 00:04:21,440
+and you know we're not going to worry
+ 
+
+223
+00:04:21,440 --> 00:04:23,030
+and you know we're not going to worry
+too much about what happens if you
+
+224
+00:04:23,030 --> 00:04:23,040
+too much about what happens if you
+ 
+
+225
+00:04:23,040 --> 00:04:24,629
+too much about what happens if you
+exactly land on the boundary you need to
+
+226
+00:04:24,629 --> 00:04:24,639
+exactly land on the boundary you need to
+ 
+
+227
+00:04:24,639 --> 00:04:26,830
+exactly land on the boundary you need to
+break ties
+
+228
+00:04:26,830 --> 00:04:26,840
+break ties
+ 
+
+229
+00:04:26,840 --> 00:04:31,749
+break ties
+somehow right so that's the basics of uh
+
+230
+00:04:31,749 --> 00:04:31,759
+somehow right so that's the basics of uh
+ 
+
+231
+00:04:31,759 --> 00:04:34,550
+somehow right so that's the basics of uh
+the kind of formulation of linear binary
+
+232
+00:04:34,550 --> 00:04:34,560
+the kind of formulation of linear binary
+ 
+
+233
+00:04:34,560 --> 00:04:37,270
+the kind of formulation of linear binary
+classification um one thing i will note
+
+234
+00:04:37,270 --> 00:04:37,280
+classification um one thing i will note
+ 
+
+235
+00:04:37,280 --> 00:04:39,350
+classification um one thing i will note
+is that uh
+
+236
+00:04:39,350 --> 00:04:39,360
+is that uh
+ 
+
+237
+00:04:39,360 --> 00:04:41,830
+is that uh
+we often see
+
+238
+00:04:41,830 --> 00:04:41,840
+we often see
+ 
+
+239
+00:04:41,840 --> 00:04:42,790
+we often see
+in
+
+240
+00:04:42,790 --> 00:04:42,800
+in
+ 
+
+241
+00:04:42,800 --> 00:04:47,030
+in
+kind of other settings here
+
+242
+00:04:47,030 --> 00:04:47,040
+
+ 
+
+243
+00:04:47,040 --> 00:04:48,310
+
+we see a
+
+244
+00:04:48,310 --> 00:04:48,320
+we see a
+ 
+
+245
+00:04:48,320 --> 00:04:50,629
+we see a
+a bias term b
+
+246
+00:04:50,629 --> 00:04:50,639
+a bias term b
+ 
+
+247
+00:04:50,639 --> 00:04:52,790
+a bias term b
+and we are going to we are going to not
+
+248
+00:04:52,790 --> 00:04:52,800
+and we are going to we are going to not
+ 
+
+249
+00:04:52,800 --> 00:04:54,830
+and we are going to we are going to not
+use that
+
+250
+00:04:54,830 --> 00:04:54,840
+use that
+ 
+
+251
+00:04:54,840 --> 00:04:58,310
+use that
+um and the reason is because we can just
+
+252
+00:04:58,310 --> 00:04:58,320
+um and the reason is because we can just
+ 
+
+253
+00:04:58,320 --> 00:05:00,070
+um and the reason is because we can just
+take f of x
+
+254
+00:05:00,070 --> 00:05:00,080
+take f of x
+ 
+
+255
+00:05:00,080 --> 00:05:02,950
+take f of x
+um which you know let's say the features
+
+256
+00:05:02,950 --> 00:05:02,960
+um which you know let's say the features
+ 
+
+257
+00:05:02,960 --> 00:05:04,790
+um which you know let's say the features
+for a particular point are
+
+258
+00:05:04,790 --> 00:05:04,800
+for a particular point are
+ 
+
+259
+00:05:04,800 --> 00:05:06,469
+for a particular point are
+something like this
+
+260
+00:05:06,469 --> 00:05:06,479
+something like this
+ 
+
+261
+00:05:06,479 --> 00:05:09,029
+something like this
+and we transform this
+
+262
+00:05:09,029 --> 00:05:09,039
+and we transform this
+ 
+
+263
+00:05:09,039 --> 00:05:11,029
+and we transform this
+into
+
+264
+00:05:11,029 --> 00:05:11,039
+into
+ 
+
+265
+00:05:11,039 --> 00:05:16,550
+into
+an f of x that has
+
+266
+00:05:16,550 --> 00:05:16,560
+
+ 
+
+267
+00:05:16,560 --> 00:05:17,909
+
+a 1
+
+268
+00:05:17,909 --> 00:05:17,919
+a 1
+ 
+
+269
+00:05:17,919 --> 00:05:20,870
+a 1
+on the end of it
+
+270
+00:05:20,870 --> 00:05:20,880
+
+ 
+
+271
+00:05:20,880 --> 00:05:30,550
+
+so
+
+272
+00:05:30,550 --> 00:05:30,560
+
+ 
+
+273
+00:05:30,560 --> 00:05:32,310
+
+by adding a one to the end we've
+
+274
+00:05:32,310 --> 00:05:32,320
+by adding a one to the end we've
+ 
+
+275
+00:05:32,320 --> 00:05:34,870
+by adding a one to the end we've
+basically folded this bias term
+
+276
+00:05:34,870 --> 00:05:34,880
+basically folded this bias term
+ 
+
+277
+00:05:34,880 --> 00:05:35,909
+basically folded this bias term
+into
+
+278
+00:05:35,909 --> 00:05:35,919
+into
+ 
+
+279
+00:05:35,919 --> 00:05:36,790
+into
+uh
+
+280
+00:05:36,790 --> 00:05:36,800
+uh
+ 
+
+281
+00:05:36,800 --> 00:05:38,870
+uh
+you know into the actual feature vector
+
+282
+00:05:38,870 --> 00:05:38,880
+you know into the actual feature vector
+ 
+
+283
+00:05:38,880 --> 00:05:41,029
+you know into the actual feature vector
+and so that's what's going to allow us
+
+284
+00:05:41,029 --> 00:05:41,039
+and so that's what's going to allow us
+ 
+
+285
+00:05:41,039 --> 00:05:43,749
+and so that's what's going to allow us
+to stick with this representation of a
+
+286
+00:05:43,749 --> 00:05:43,759
+to stick with this representation of a
+ 
+
+287
+00:05:43,759 --> 00:05:45,430
+to stick with this representation of a
+classifier going forward and we're not
+
+288
+00:05:45,430 --> 00:05:45,440
+classifier going forward and we're not
+ 
+
+289
+00:05:45,440 --> 00:05:48,150
+classifier going forward and we're not
+going to have to juggle these bias terms
+
+290
+00:05:48,150 --> 00:05:48,160
+going to have to juggle these bias terms
+ 
+
+291
+00:05:48,160 --> 00:05:49,029
+going to have to juggle these bias terms
+so
+
+292
+00:05:49,029 --> 00:05:49,039
+so
+ 
+
+293
+00:05:49,039 --> 00:05:51,110
+so
+this is the this is the kind of basic
+
+294
+00:05:51,110 --> 00:05:51,120
+this is the this is the kind of basic
+ 
+
+295
+00:05:51,120 --> 00:05:53,670
+this is the this is the kind of basic
+setup of binary classification
+
+296
+00:05:53,670 --> 00:05:53,680
+setup of binary classification
+ 
+
+297
+00:05:53,680 --> 00:05:55,670
+setup of binary classification
+going forward over the next few segments
+
+298
+00:05:55,670 --> 00:05:55,680
+going forward over the next few segments
+ 
+
+299
+00:05:55,680 --> 00:05:57,990
+going forward over the next few segments
+we're going to talk about uh the
+
+300
+00:05:57,990 --> 00:05:58,000
+we're going to talk about uh the
+ 
+
+301
+00:05:58,000 --> 00:06:00,390
+we're going to talk about uh the
+perceptron and logistic regression which
+
+302
+00:06:00,390 --> 00:06:00,400
+perceptron and logistic regression which
+ 
+
+303
+00:06:00,400 --> 00:06:03,189
+perceptron and logistic regression which
+are two different ways of thinking about
+
+304
+00:06:03,189 --> 00:06:03,199
+are two different ways of thinking about
+ 
+
+305
+00:06:03,199 --> 00:06:04,870
+are two different ways of thinking about
+learning these weights
+
+306
+00:06:04,870 --> 00:06:04,880
+learning these weights
+ 
+
+307
+00:06:04,880 --> 00:06:06,950
+learning these weights
+that we're going to see are functionally
+
+308
+00:06:06,950 --> 00:06:06,960
+that we're going to see are functionally
+ 
+
+309
+00:06:06,960 --> 00:06:09,029
+that we're going to see are functionally
+quite similar
+
+310
+00:06:09,029 --> 00:06:09,039
+quite similar
+ 
+
+311
+00:06:09,039 --> 00:06:13,080
+quite similar
+so that's it for this segment
+
